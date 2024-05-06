@@ -32,14 +32,6 @@ export const informRocketEngineThrustSeaLevel = async(thrust_sea_level)=>{
     section__information__1.innerHTML = "";
     section__information__1.append(div)
 
-    // <div class="carousel__item">
-    //     <div class="item__progress__bar">
-    //         <div class="progress__value">
-    //             <strong>Title</strong>
-    //             <small>3</small>
-    //         </div>
-    //     </div>
-    // </div>
 }
 
 
@@ -71,12 +63,8 @@ export const informRocketEngineThrustVacuum = async(thrust_vacuum)=>{
     // section__information__1.innerHTML = "";
     section__information__1.append(div)
 
-    // <div class="carousel__item">
-    //     <div class="item__progress__bar">
-    //         <div class="progress__value">
-    //             <strong>Title</strong>
-    //             <small>3</small>
-    //         </div>
-    //     </div>
-    // </div>
-}
+}   
+
+// export const informRocketFirsStageThrustVacuum = async(thrust_vacuum)=>{
+//     let {kN:totalKN} = await getAllRocketFirstStageThrustVacuumTotal();
+// }

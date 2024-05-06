@@ -2,22 +2,39 @@ import {
     getAllRockets, 
     getAllRocketsId
 } from "../modules/rockets.js";
+
+
 import { 
     nameRockets 
 } from "./title.js";
+
+
 import { 
     informationRockets,
     informationLaunchCostRocket,
     informationFirstFlightRocket,
     informationWebRocket
 } from "./information.js";
+
+
 import { 
     informRocketEngineThrustSeaLevel, 
     informRocketEngineThrustVacuum
 } from "./inform.js";
+
+
 import { 
     imageRockets 
 } from "./card.js";
+
+
+import { 
+    tableRocketFirstColumn,
+    tableRocketSecondColumn 
+} from "../modulesComponents/tables.js";
+
+
+
 import { 
     progressRocketWeight,
     progressPayloadWeights, 
@@ -38,8 +55,10 @@ const getRocketsId = async(e)=>{
     
     let information__2 = document.querySelector("#information__2");
     information__2.innerHTML = "";
+
     let description__item = document.querySelector("#description__item")
     description__item.innerHTML = "";
+
     let section__image = document.querySelector("#section__image")
     section__image.innerHTML = "";
 
@@ -55,6 +74,9 @@ const getRocketsId = async(e)=>{
     await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
     await informRocketEngineThrustVacuum(Rocket.engines.thrust_vacuum);
     await imageRockets(Rocket.flickr_images);
+
+    await tableRocketFirstColumn(Rocket)
+    await tableRocketSecondColumn(Rocket)
 
     await progressRocketWeight(Rocket)
     await progressPayloadWeights(Rocket)
@@ -77,7 +99,7 @@ export const paginationRockets = async()=>{
         div.appendChild(a);
     });
     let [a1,a2,a3,a4] = div.children
-    a1.click();
+    a3.click();
     // <div class="buttom__paginacion">
     //     <a href="#">&laquo;</a> 
     //     <a href="#" class="activo">1</a>
