@@ -326,7 +326,9 @@ body {
 }
 
 .footer {
-    background: coral;
+    box-shadow: 1px 1px 6px 6px #05264d;
+    border-top-left-radius: 800px;
+    border-top-right-radius: 800px;
     grid-area: section__footer;
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
